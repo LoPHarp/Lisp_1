@@ -88,10 +88,10 @@ CL-USER> (listp a)
 T
 
 ## 8
-CL-USER> (append a (caddr a)) 
-(|hello there| 4 (2 3) (NIL) 2 3)
+CL-USER> (append a (caddr a))  
+(|hello there| 4 (2 3) (NIL) 2 3)  
 
 
-## 1.1.2 Завдання за варіантом
-CL-USER> (set `lst `(3 C B))
-(list 1 `A (THIRD lst) lst)
+## 1.1.2 Завдання за варіантом  
+CL-USER> (set `lst `(3 C B))  
+(list 1 `A (THIRD lst) lst)  
