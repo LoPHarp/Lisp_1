@@ -95,3 +95,4 @@ CL-USER> (append a (caddr a))
 ## 1.1.2 Завдання за варіантом  
 CL-USER> (set `lst `(3 C B))  
 (list 1 `A (THIRD lst) lst)  
+(1 A B (3 C B))  
