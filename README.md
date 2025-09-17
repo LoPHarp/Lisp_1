@@ -13,10 +13,10 @@
 ```lisp
 
 ;; №1
-CL-USER> (set `a (list `|hello there| 4 `(2 3) `(nil)))
+CL-USER> (set 'a (list '|hello there| 4 '(2 3) '(nil)))
 (|hello there| 4 (2 3) (NIL))
 
-CL-USER> (defparameter *b* (cons `|hello there| (cons 4 (cons `(2 3) (cons `(nil) nil)))) "Список через cons")
+CL-USER> (defparameter *b* (cons '|hello there| (cons 4 (cons '(2 3) (cons '(nil) nil)))) "Список через cons")
 (print *b*)
 (|hello there| 4 (2 3) (NIL)) 
 
@@ -35,7 +35,7 @@ CL-USER> (car (cdr (cdr a)))
 CL-USER> (caddr a)
 (2 3)
 
-CL-USER> (THIRD a)
+CL-USER> (third a)
 (2 3)
 
 ;; №5
@@ -45,26 +45,26 @@ CL-USER> (last *b*)
 CL-USER> (car (reverse *b*))
 (NIL)
 
-CL-USER> (NTH 4 *b*)
+CL-USER> (nth 4 *b*)
 NIL
 
-CL-USER> (cdr (NTHCDR 3 *b*))
+CL-USER> (cdr (nthcdr 3 *b*))
 NIL
 
 ;; №6
 CL-USER> (atom (car (rest a)))
 T
 
-CL-USER> (atom (car (cdr (NTHCDR 2 (reverse a)))))
+CL-USER> (atom (car (cdr (nthcdr 2 (reverse a)))))
 T
 
-CL-USER> (atom (car (NTHCDR 2 a)))
+CL-USER> (atom (car (nthcdr 2 a)))
 NIL
 
 CL-USER> (listp *b*)
 T
 
-CL-USER> (listp `(nil))
+CL-USER> (listp '(nil))
 T
 
 CL-USER> (listp 4)
@@ -101,7 +101,7 @@ CL-USER> (append a (caddr a))
 </p>
 
 ```lisp
-CL-USER> (set `lst `(3 C B))
-(list 1 `A (THIRD lst) lst)
-(1 A B (3 C B))
+CL-USER> (set 'lst '(3 c b))
+(list 1 'a (list (caddr lst)) lst)
+(1 A (B) (3 C B))
 ```
