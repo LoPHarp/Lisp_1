@@ -102,6 +102,6 @@ CL-USER> (append a (caddr a))
 
 ```lisp
 CL-USER> (set 'lst '(3 c b))
-(list 1 'a (list (caddr lst)) lst)
+(list 1 'a (nthcdr 2 lst) lst)
 (1 A (B) (3 C B))
 ```
